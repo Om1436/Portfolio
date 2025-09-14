@@ -7,7 +7,6 @@
 
 html {
   scroll-behavior: smooth;
-  /* smooth scroll */
 }
 
 body {
@@ -34,20 +33,20 @@ body {
 .logo-container {
   display: flex;
   align-items: center;
-  gap: 0.75rem; /* space between image and name */
+  gap: 0.75rem;
 }
 
 .profile-img {
-  width: 40px;       /* adjust as needed */
+  width: 40px;
   height: 40px;
-  border-radius: 50%; /* makes it circular */
-  object-fit: cover;  /* ensures image covers the circle */
-  border: 2px solid #facc15; /* optional golden border */
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #facc15;
   transition: transform 0.3s;
 }
 
 .profile-img:hover {
-  transform: scale(1.1); /* subtle hover effect */
+  transform: scale(1.1);
 }
 
 .logo {
@@ -71,11 +70,10 @@ body {
   color: #facc15;
 }
 
-/* Sections - full screen */
+/* Sections */
 section {
   min-height: 100vh;
   padding: 6rem 2rem 3rem;
-  /* top padding for navbar space */
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -96,16 +94,33 @@ section {
   font-size: 1.2rem;
   color: #cbd5e1;
 }
-/* See my work */
 
-/* Special styling just for See My Work */
+/* Buttons */
+.btn,
+.work-btn {
+  display: inline-block;
+  padding: 0.65rem 1.2rem;
+  margin-top: 0.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.btn {
+  background: #facc15;
+  color: black;
+}
+
+.btn:hover {
+  background: #fde047;
+  transform: scale(1.05);
+}
+
 .work-btn {
   background: #facc15;
   color: #0f172a;
-  font-size: 1rem;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  font-weight: bold;
   box-shadow: 0 0 10px rgba(250, 204, 21, 0.6);
 }
 
@@ -115,37 +130,12 @@ section {
   box-shadow: 0 0 15px rgba(250, 204, 21, 0.8);
 }
 
-
-/* Buttons */
-.btn {
-  display: inline-block;
-  min-width: 120px;
-  max-width: 160px;
-  padding: 0.5rem 1rem;
-  margin-top: 0.5rem;
-  background: #facc15;
-  color: black;
-  font-weight: 600;
-  font-size: 0.95rem;
-  border-radius: 6px;
-  text-decoration: none;
-  text-align: center;
-  transition: background 0.3s, transform 0.2s;
-  align-self: center;
-  /* prevent flex stretching */
-}
-
-.btn:hover {
-  background: #fde047;
-  transform: scale(1.05);
-}
-
-/* About Section */
+/* About */
 .about {
-  padding: 6rem 2rem 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: #0f172a;
 }
 
 .about-container {
@@ -154,10 +144,8 @@ section {
   gap: 2rem;
   max-width: 1100px;
   margin: 0 auto;
-  align-items: flex-start;
 }
 
-/* Text Side */
 .about-text {
   flex: 1 1 55%;
   background: #1e293b;
@@ -176,13 +164,10 @@ section {
 .about-text p {
   margin-bottom: 1rem;
   color: #cbd5e1;
-  font-size: 1.05rem;
 }
 
-/* Skills Side */
 .skills {
   flex: 1 1 35%;
-  text-align: left;
 }
 
 .skills h3 {
@@ -198,7 +183,6 @@ section {
 }
 
 .skill {
-  display: inline-block;
   padding: 0.75rem 1rem;
   background: #0f172a;
   border: 1px solid #334155;
@@ -206,25 +190,16 @@ section {
   text-align: center;
   font-weight: 600;
   color: #a78bfa;
-  /* Purple accent */
   transition: all 0.3s ease;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 .skill:hover {
   background: #1e293b;
   color: #facc15;
-  /* Yellow on hover */
   transform: translateY(-3px);
 }
 
-/* Projects */
-.projects p {
-  max-width: 600px;
-  margin: 1rem auto;
-  color: #cbd5e1;
-}
-
+/* Section headings */
 .about-text h2,
 .projects h2,
 .resume h2,
@@ -232,11 +207,20 @@ section {
   margin-bottom: 5rem;
   font-size: 2rem;
   color: #facc15;
-  /* Golden color */
   text-align: center;
 }
 
-/* Project cards */
+/* Projects */
+.projects {
+  background: linear-gradient(to right, #1e293b, #0f172a);
+}
+
+.projects p {
+  max-width: 600px;
+  margin: 1rem auto;
+  color: #cbd5e1;
+}
+
 .projects-container {
   display: flex;
   justify-content: center;
@@ -251,13 +235,6 @@ section {
   max-width: 350px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.project-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -266,37 +243,32 @@ section {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
 }
 
-
 /* Resume */
+.resume {
+  background: #0f172a;
+}
+
 .resume p {
   margin-bottom: 1rem;
   color: #cbd5e1;
 }
 
 .resume-buttons {
-  height: 100px;
   display: flex;
   justify-content: center;
-  gap: 2rem; 
+  gap: 2rem;
 }
 
-/* Contact Section */
+/* Contact */
 .contact {
   padding: 6rem 2rem 3rem;
-  background: linear-gradient(to right, #1e293b, #0f172a); 
+  background: linear-gradient(to right, #1e293b, #0f172a);
   text-align: center;
-}
-
-.contact h2 {
-  font-size: 2rem;
-  color: #facc15; 
-  margin-bottom: 4rem;
 }
 
 .contact-subtitle {
   color: #cbd5e1;
   margin-bottom: 3rem;
-  font-size: 1.1rem;
 }
 
 .contact-container {
@@ -314,17 +286,16 @@ section {
   box-shadow: 0 8px 20px rgba(0,0,0,0.3);
   text-align: left;
   color: #cbd5e1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .contact-card h3 {
   color: #facc15;
   margin-bottom: 1rem;
-  font-size: 1.3rem;
 }
 
 .contact-info p {
   margin: 0.5rem 0;
-  font-size: 1rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -352,25 +323,16 @@ section {
   transform: scale(1.2);
 }
 
-/* Contact Card Hover */
-.contact-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
 .contact-card:hover {
   transform: translateY(-8px) scale(1.03);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
 }
 
-
-
-
-
 /* Footer */
 footer {
   text-align: center;
   padding: 1rem;
-  background: #1e293b;
+  background: #0f172a;
   color: #94a3b8;
 }
 
@@ -383,9 +345,7 @@ footer {
 
 .f-info-socials a {
   color: #facc15;
-  /* yellow like your buttons */
   font-size: 2rem;
-  /* make it visible */
   transition: color 0.3s, transform 0.3s;
 }
 
@@ -394,30 +354,84 @@ footer {
   transform: scale(1.2);
 }
 
-/* Alternating Section Backgrounds */
+/* Responsive */
+@media (max-width: 1024px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
 
-/* Hero - Dark navy gradient (keep as is) */
-.hero {
-  background: linear-gradient(to right, #1e293b, #0f172a);
+  .about-text {
+    text-align: center;
+  }
+
+  .skills {
+    text-align: center;
+  }
+
+  .project-card {
+    max-width: 90%;
+  }
 }
 
-/* Alternating section backgrounds */
-.about {
-  background:#0f172a; 
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .about-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .projects-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-card {
+    width: 100%;
+    max-width: 90%;
+  }
+
+  .resume-buttons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .contact-container {
+    flex-direction: column;
+  }
 }
 
-.projects {
-  background: linear-gradient(to right, #1e293b, #0f172a); 
-}
+@media (max-width: 480px) {
+  .hero h2 {
+    font-size: 1.6rem;
+  }
 
-.resume {
-  background:#0f172a
-}
+  .hero p {
+    font-size: 0.9rem;
+  }
 
-.contact {
-  background: linear-gradient(to right, #1e293b, #0f172a); 
-}
+  .btn,
+  .work-btn {
+    width: 100%;
+  }
 
-footer {
-  background:#0f172a
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    padding: 1.2rem;
+  }
 }
